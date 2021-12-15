@@ -1,0 +1,97 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+p {
+	word-wrap: break-word;
+	font-size: 18px;
+}
+
+figure {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+body {
+	background-color: black;
+}
+
+#blog-block {
+	width: 1024px;
+	margin: auto;
+}
+
+#blog-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 90px;
+	border-bottom: 1px dashed white;
+}
+
+#blog-header h1 {
+	margin-left: 15px;
+}
+
+#blog-header ul {
+	margin-right: 15px;
+}
+
+#blog-header ul li {
+	display: inline;
+	margin-left: 10px;
+	font-size: 22px;
+}
+
+#blog-container {
+	width: 100%;
+}
+
+.blog-content {
+	width: calc(100% - 100px);
+	margin: auto;
+	margin-top: 40px;
+}
+
+#blog-post-list {
+	width: calc(100% - 100px);
+	margin: auto;
+	margin-top: 40px;
+}
+
+#blog-post-list h1 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#blog-img-place {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
