@@ -1,8 +1,8 @@
 * {
 	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	color: white;
+	/* padding: 0px; */
+	/* border: 0px; */
+	color: rgb(195, 195, 195);
 }
 
 /* width */
@@ -37,7 +37,7 @@ figure {
 }
 
 body {
-	background-color: black;
+	background-color: rgb(17, 17, 17);
 }
 
 #blog-block {
@@ -94,4 +94,11 @@ body {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
+}
+
+.grid-test {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-auto-rows: 50px;
 }
