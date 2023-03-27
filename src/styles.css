@@ -40,6 +40,51 @@ body {
 	background-color: rgb(17, 17, 17);
 }
 
+input, textarea {
+  background-color: #222;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #FFF;
+  font-weight: 500;
+  color: white;
+  padding: 8px 12px;
+  margin: 4px 2px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  background-color: #444;
+  border-color: #20c929;
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+  background-color: #222;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #FFF;
+  font-weight: 700;
+  color: white;
+  padding: 8px 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover {
+  background-color: #444;
+  border-color: #20c929;
+}
+
+.input-full {
+  width: 100%;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
 #blog-block {
 	width: 1024px;
 	margin: auto;
@@ -58,11 +103,17 @@ body {
 	margin-left: 15px;
 }
 
-#blog-header ul {
+#navbar {
+  padding-top: 10px;
+  padding-bottom: 13px;
+  border-bottom: 1px dashed white;
+}
+
+#navbar ul {
 	margin-right: 15px;
 }
 
-#blog-header ul li {
+#navbar ul li {
 	display: inline;
 	margin-left: 10px;
 	font-size: 22px;
@@ -76,12 +127,13 @@ body {
 	width: calc(100% - 100px);
 	margin: auto;
 	margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 #blog-post-list {
 	width: calc(100% - 100px);
 	margin: auto;
-	margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 #blog-post-list h1 {

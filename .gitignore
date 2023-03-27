@@ -1,4 +1,5 @@
 release/
 node_modules/
 .next/
+phpmyadmin/
 

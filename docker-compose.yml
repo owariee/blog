@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:debian
+    expose:
+      - "3306"
+      - "33060"
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+    volumes:
+      - data:/var/lib/mysql
+    networks:
+      - blog-net
+
+  web:
+    image: wyveo/nginx-php-fpm:php81
+    ports:
+      - "3000:80"
+    volumes:
+      - ./:/usr/share/nginx/html
+    networks:
+      - blog-net
+
+volumes:
+  data:
+    driver: local
+
+networks:
+  blog-net:
+    driver: bridge
+
