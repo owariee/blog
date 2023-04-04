@@ -1,10 +1,13 @@
 const mysql = require("mysql2");
 const express = require("express");
 const crypto = require('crypto');
+const cors = require('cors');
+const http_codes = require('http-status-codes');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const pool = mysql.createPool({
   host: "localhost",
@@ -18,27 +21,41 @@ const promisePool = pool.promise();
 function errorHandler(res) {
   return (err) => {
       console.log(err);
-      res.json({result: err});
+      res.json({
+        status: http_codes.StatusCodes.INTERNAL_SERVER_ERROR,
+        message: http_codes.ReasonPhrases.INTERNAL_SERVER_ERROR,
+        data: {
+          error_details: err
+        }
+      });
   }
 }
 
 app.get('/posts', (req, res) => {
   promisePool.query("SELECT * FROM `blog`.`posts` ORDER BY `posts_epoch`")
     .then(([result, fields]) => {
-      res.json({result: result})
+      res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: result
+      })
     })
     .catch(errorHandler(res))
-    .finally(() => console.log("GET Posts Executed!"));
+    .finally(() => console.log("GET request on /posts!"));
 })
 
 app.get('/posts/:id', (req, res) => {
   let query = "SELECT * FROM `blog`.`posts` WHERE `posts_id` = ? ORDER BY `posts_epoch`"
   promisePool.query(query, [req.params.id])
     .then(([result, fields]) => {
-      res.json({result: result})
+      res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: result
+      })
     })
     .catch(errorHandler(res))
-    .finally(() => console.log("GET Posts Executed!"));
+    .finally(() => console.log("GET request on /posts/" + req.params.id + "!"));
 })
 
 const validateSession = function(token) {
@@ -72,9 +89,13 @@ app.delete('/posts/:id', (req, res) => {
   validateSession(token)
     .then((userId) => validatePerms(userId, 2))
     .then(() => promisePool.query(query, [req.params.id]))
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: null
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("Post Delete Called"));
+    .finally(() => console.log("DELETE request on /posts/" + req.params.id + "!"));
 })
 
 app.post('/posts', (req, res) => {
@@ -84,30 +105,42 @@ app.post('/posts', (req, res) => {
   validateSession(token)
     .then((userId) => validatePerms(userId, 2))
     .then(() => promisePool.query(query, [name, epoch, content]))
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: null
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("Post Insert Called"));
+    .finally(() => console.log("POST request on /posts!"));
 })
 
-app.put('/posts', (req, res) => {
+app.put('/posts/:id', (req, res) => {
   const token = req.headers["authorization"];
   let query = "UPDATE `blog`.`posts` SET `posts_name` = ?,`posts_epoch` = ?,`posts_content` = ? WHERE `posts_id` = ?";
-  let [id, name, epoch, content] = [req.body['id'], req.body['name'], req.body['epoch'], req.body['content']];
+  let [id, name, epoch, content] = [req.params.id, req.body['name'], req.body['epoch'], req.body['content']];
   validateSession(token)
     .then((userId) => validatePerms(userId, 2))
     .then(() => promisePool.query(query, [name, epoch, content, id]))
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: null
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("Post Update Called"));
+    .finally(() => console.log("PUT request on /posts/" + req.params.id + "!"));
 })
 
-app.post('/posts/search', (req, res) => {
+app.get('/posts/search', (req, res) => {
   let query = "SELECT * FROM `blog`.`posts` WHERE `posts_name` LIKE ? ORDER BY `posts_epoch`";
   let search = '%' + req.body['search'] + '%';
     promisePool.query(query, [search])
-    .then(([result, fields]) => res.json({result: result}))
+    .then(([result, fields]) => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: result
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("Post Search Called"));
+    .finally(() => console.log("GET request on /posts/search"));
 })
 
 function genRandomString(length) {
@@ -130,12 +163,29 @@ function genSaltedValue(value, salt) {
 
 app.get('/user/info', (req, res) => {
   const token = req.headers["authorization"];
+  if(token === undefined) {
+    res.json({
+        status: http_codes.StatusCodes.INTERNAL_SERVER_ERROR,
+        message: http_codes.ReasonPhrases.INTERNAL_SERVER_ERROR,
+        data: {
+          error_details: "Not logged!"
+        }
+      });
+    return;
+  }
   let query = "SELECT `email`, `permission` FROM `blog`.`users` WHERE `id` = ?";
   validateSession(token)
     .then((userId) => promisePool.query(query, [userId]))
-    .then(([result, fields]) => res.json({email: result[0]['email'], permission: result[0]['permission']}))
+    .then(([result, fields]) => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: {
+          mail: result[0]['email'],
+          perm: result[0]['permission']
+        }
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("User Info Called"));
+    .finally(() => console.log("GET request on /user/info!"));
 })
 
 app.post('/user/register', (req, res) => {
@@ -151,15 +201,20 @@ app.post('/user/register', (req, res) => {
       }
     })
     .then(() => promisePool.query(query, [mail, salted, salt, 1]))
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: null
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("User Register Called"));
+    .finally(() => console.log("POST request on /user/register!"));
 })
 
 app.post('/user/login', (req, res) => {
   let [mail, pass] = [req.body['mail'], req.body['pass']];
   let queryMail = "SELECT `id`, `salt`, `pass` FROM `blog`.`users` WHERE `email` = ?";
   let query = "INSERT INTO `blog`.`sessions`(`id`, `user_id`, `hash`) VALUES (NULL,?,?)";
+  let sessionId = 0;
   promisePool.query(queryMail, [mail])
     .then(([result, fields]) => {
       if (result.length < 1) {
@@ -172,12 +227,16 @@ app.post('/user/login', (req, res) => {
       return result[0]['id'];
     })
     .then((id) => {
-      let sessionId = genRandomString(32);
+      sessionId = genRandomString(32);
       return promisePool.query(query, [id, sessionId]);
     })
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: {sessionId: sessionId}
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("User Login Called"));
+    .finally(() => console.log("POST request on /user/login!"));
 })
 
 app.post('/user/logout', (req, res) => {
@@ -185,9 +244,13 @@ app.post('/user/logout', (req, res) => {
   let query = "DELETE FROM `blog`.`sessions` WHERE `hash` = ?";
   validateSession(token)
     .then(() => promisePool.query(query, [token]))
-    .then(() => res.json({result: "success"}))
+    .then(() => res.json({
+        status: http_codes.StatusCodes.OK,
+        message: http_codes.ReasonPhrases.OK,
+        data: null
+      }))
     .catch(errorHandler(res))
-    .finally(() => console.log("User Logout Called"));
+    .finally(() => console.log("POST request on /user/logout!"));
 })
 
 app.get('/', (req, res) => {
@@ -206,7 +269,7 @@ app.delete('/', (req, res) => {
   return res.send('DELETE Method!');
 });
  
-app.listen(6000, () => {
-  console.log(`REST API listening on 6000`);
+app.listen(3002, () => {
+  console.log(`REST API listening on 3002`);
 });
 

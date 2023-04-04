@@ -9,6 +9,8 @@ services:
       - '33060'
     environment:
       - MYSQL_ROOT_PASSWORD=123
+      - PUID=1000
+      - PGID=984
     volumes:
       - data:/var/lib/mysql
     networks:
