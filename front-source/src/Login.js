@@ -1,14 +1,16 @@
 import { useFormInput, useFormCheckbox } from './Auth';
 import React from "react";
 import axios from "axios";
-import { redirect } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 function Login() {
+  const history = useNavigate();
   const [errorMsg, setErrorMsg] = React.useState("");
   const mail = useFormInput('');
   const pass = useFormInput('');
-  const useCookie = useFormCheckbox();
-
+  const cookieCheckbox = useFormCheckbox();
+  const { setToken, setUseCookie, setAuth } = useAuth();
 
   let htmlErrorMsg = <></>;
   if (errorMsg.length != 0) {
@@ -24,17 +26,13 @@ function Login() {
     axios.post("http://localhost:3002/user/login", data).then((response) => {
       if(response.data.status != 200) {
         setErrorMsg(response.data.data.error_details);
-        return;
+        throw response.data.data.error_details;
       }
 
-      if(useCookie.value) {
-        // store token in cookies
-      } else {
-        sessionStorage.setItem('authorization', response.data.data.sessionId);
-      }
-
-      return redirect('/home')
-      console.log(response.data);
+      setUseCookie(cookieCheckbox);
+      setToken(response.data.data.sessionId);
+      setAuth(true);
+      history("/home");
     }).catch((err) => console.log(err));
   }
 
@@ -46,7 +44,7 @@ function Login() {
         <input {...mail} type="text" id="email" name="email" placeholder="name@example.com"/><br/>
         <label htmlFor="pass">Password:</label><br/>
         <input {...pass} type="password" id="pass" name="pass"/><br/><br/>
-        <input {...useCookie} type="checkbox" id="cookie" name="cookie" value="true"/>
+        <input {...cookieCheckbox} type="checkbox" id="cookie" name="cookie" value="true"/>
         <label htmlFor="cookie"> Stay connected!</label><br/><br/>
         {htmlErrorMsg}
         <button type="button" onClick={execLogin}>Submit</button>

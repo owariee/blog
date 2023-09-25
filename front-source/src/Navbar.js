@@ -1,22 +1,8 @@
-import axios from "axios";
-import React from "react";
 import { Link } from "react-router-dom";
-import { useCookies } from 'react-cookie';
-import * as Auth from './Auth';
+import { useAuth } from './AuthProvider';
 
 function Navbar() {
-  const [user, setUser] = React.useState(null);
-  const [cookies, setCookie] = useCookies(['authorization']);
-
-  React.useEffect(() => {
-    Auth.isLogged(cookies)
-      .then((userReq) => {
-        if(userReq.data.status != 200) {
-          throw userReq.data.error_details;
-        }
-        setUser(userReq);
-      }).catch((err) => console.log(err));
-  }, []);
+  const { user, setAuth } = useAuth();
 
   let navItems;
   if(user === null) {
@@ -61,3 +47,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

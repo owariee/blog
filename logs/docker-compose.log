@@ -1,0 +1,256 @@
+Attaching to blog-mysql-1, blog-web-1
+blog-mysql-1  | 2023-04-04 22:30:23+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-mysql-1  | 2023-04-04 22:30:24+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+blog-mysql-1  | 2023-04-04 22:30:24+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-web-1    | 2023-04-04 22:30:24,501 INFO Set uid to user 0 succeeded
+blog-web-1    | 2023-04-04 22:30:24,816 INFO RPC interface 'supervisor' initialized
+blog-web-1    | 2023-04-04 22:30:24,816 INFO supervisord started with pid 13
+blog-web-1    | 2023-04-04 22:30:25,818 INFO spawned: 'stdout' with pid 14
+blog-web-1    | 2023-04-04 22:30:25,819 INFO spawned: 'php-fpm8' with pid 15
+blog-web-1    | 2023-04-04 22:30:25,819 INFO spawned: 'nginx' with pid 16
+blog-web-1    | 2023-04-04 22:30:27,476 INFO success: stdout entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-04 22:30:27,476 INFO success: php-fpm8 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-04 22:30:27,476 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/index.php?route=/sql&pos=0&db=blog&table=sessions HTTP/1.1" 200 3374 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.min.js?v=5.2.1 HTTP/1.1" 200 89947 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery-migrate.min.js?v=5.2.1 HTTP/1.1" 200 13467 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:32:17 [info] 17#17: *1 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/keyhandler.js?v=5.2.1 HTTP/1.1" 200 2059 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/sprintf.js?v=5.2.1 HTTP/1.1" 200 7409 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:32:17 [info] 20#20: *5 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 2023/04/04 22:32:17 [info] 18#18: *3 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/ajax.js?v=5.2.1 HTTP/1.1" 200 29948 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:32:17 [info] 19#19: *4 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.validate.min.js?v=5.2.1 HTTP/1.1" 200 24601 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.debounce-1.0.6.js?v=5.2.1 HTTP/1.1" 200 1608 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/cross_framing_protection.js?v=5.2.1 HTTP/1.1" 200 405 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery-ui-timepicker-addon.js?v=5.2.1 HTTP/1.1" 200 78475 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/menu_resizer.js?v=5.2.1 HTTP/1.1" 200 5729 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:32:17 [info] 25#25: *11 epoll_wait() reported that client prematurely closed connection, so upstream connection is closed too while sending request to upstream, client: 172.18.0.1, server: _, request: "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "localhost:3000"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/dot.gif HTTP/1.1" 200 43 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/pmahomme/img/logo_right.png HTTP/1.1" 200 4306 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/favicon.ico HTTP/1.1" 200 22486 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:32:17 [info] 22#22: *7 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_help.png HTTP/1.1" 200 705 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/ HTTP/1.1" 302 31 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/index.php?route=/&route=%2F&db=blog&table=sessions HTTP/1.1" 200 17843 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.uitablefilter.js?v=5.2.1 HTTP/1.1" 200 3139 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/table/change.js?v=5.2.1 HTTP/1.1" 200 29082 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/gis_data_editor.js?v=5.2.1 HTTP/1.1" 200 13582 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1" 200 7924 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/multi_column_sort.js?v=5.2.1 HTTP/1.1" 200 1281 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/sql.js?v=5.2.1 HTTP/1.1" 200 35541 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/makegrid.js?v=5.2.1 HTTP/1.1" 200 81012 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/logo_left.png HTTP/1.1" 200 2713 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_fulltext.png HTTP/1.1" 200 176 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/arrow_ltr.png HTTP/1.1" 200 101 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_home.png HTTP/1.1" 200 734 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_loggoff.png HTTP/1.1" 200 626 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_docs.png HTTP/1.1" 200 705 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_sqlhelp.png HTTP/1.1" 200 512 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/index.php?route=/sql&pos=0&db=blog&table=sessions HTTP/1.1" 200 3374 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.min.js?v=5.2.1 HTTP/1.1" 200 89947 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery-migrate.min.js?v=5.2.1 HTTP/1.1" 200 13467 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 17#17: *1 client 172.18.0.1 closed keepalive connection
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/keyhandler.js?v=5.2.1 HTTP/1.1" 200 2059 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/sprintf.js?v=5.2.1 HTTP/1.1" 200 7409 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 20#20: *5 client 172.18.0.1 closed keepalive connection
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 18#18: *3 client 172.18.0.1 closed keepalive connection
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/ajax.js?v=5.2.1 HTTP/1.1" 200 29948 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 19#19: *4 client 172.18.0.1 closed keepalive connection
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.validate.min.js?v=5.2.1 HTTP/1.1" 200 24601 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.debounce-1.0.6.js?v=5.2.1 HTTP/1.1" 200 1608 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/cross_framing_protection.js?v=5.2.1 HTTP/1.1" 200 405 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery-ui-timepicker-addon.js?v=5.2.1 HTTP/1.1" 200 78475 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/dist/menu_resizer.js?v=5.2.1 HTTP/1.1" 200 5729 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 25#25: *11 epoll_wait() reported that client prematurely closed connection, so upstream connection is closed too while sending request to upstream, client: 172.18.0.1, server: _, request: "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "localhost:3000"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/dot.gif HTTP/1.1" 200 43 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/pmahomme/img/logo_right.png HTTP/1.1" 200 4306 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/favicon.ico HTTP/1.1" 200 22486 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 2023/04/04 22:32:17 [info] 22#22: *7 client 172.18.0.1 closed keepalive connection
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:17 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_help.png HTTP/1.1" 200 705 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/ HTTP/1.1" 302 31 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/index.php?route=/&route=%2F&db=blog&table=sessions HTTP/1.1" 200 17843 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/vendor/jquery/jquery.uitablefilter.js?v=5.2.1 HTTP/1.1" 200 3139 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/table/change.js?v=5.2.1 HTTP/1.1" 200 29082 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/gis_data_editor.js?v=5.2.1 HTTP/1.1" 200 13582 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1" 200 7924 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/multi_column_sort.js?v=5.2.1 HTTP/1.1" 200 1281 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/sql.js?v=5.2.1 HTTP/1.1" 200 35541 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/js/dist/makegrid.js?v=5.2.1 HTTP/1.1" 200 81012 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/logo_left.png HTTP/1.1" 200 2713 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_fulltext.png HTTP/1.1" 200 176 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/arrow_ltr.png HTTP/1.1" 200 101 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_home.png HTTP/1.1" 200 734 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_loggoff.png HTTP/1.1" 200 626 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_docs.png HTTP/1.1" 200 705 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_sqlhelp.png HTTP/1.1" 200 512 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_cog.png HTTP/1.1" 200 442 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_collapseall.png HTTP/1.1" 200 143 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_link.png HTTP/1.1" 200 280 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_newdb.png HTTP/1.1" 200 585 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_plus.png HTTP/1.1" 200 143 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_host.png HTTP/1.1" 200 591 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_reload.png HTTP/1.1" 200 527 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_tbl.png HTTP/1.1" 200 645 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_browse.png HTTP/1.1" 200 486 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_db.png HTTP/1.1" 200 328 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_props.png HTTP/1.1" 200 573 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_search.png HTTP/1.1" 200 538 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_insrow.png HTTP/1.1" 200 157 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_sql.png HTTP/1.1" 200 680 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblexport.png HTTP/1.1" 200 514 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_rights.png HTTP/1.1" 200 461 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblops.png HTTP/1.1" 200 537 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblimport.png HTTP/1.1" 200 556 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_triggers.png HTTP/1.1" 200 446 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/console.png HTTP/1.1" 200 292 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_success.png HTTP/1.1" 200 465 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_edit.png HTTP/1.1" 200 377 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_top.png HTTP/1.1" 200 220 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_print.png HTTP/1.1" 200 639 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_chart.png HTTP/1.1" 200 449 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_view_add.png HTTP/1.1" 200 678 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_drop.png HTTP/1.1" 200 637 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/window-new.png HTTP/1.1" 200 468 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/navigation&ajax_request=1 HTTP/1.1" 200 2279 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/config/get HTTP/1.1" 200 1513 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_cog.png HTTP/1.1" 200 442 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_collapseall.png HTTP/1.1" 200 143 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_link.png HTTP/1.1" 200 280 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_newdb.png HTTP/1.1" 200 585 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_plus.png HTTP/1.1" 200 143 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_host.png HTTP/1.1" 200 591 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_reload.png HTTP/1.1" 200 527 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_tbl.png HTTP/1.1" 200 645 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_browse.png HTTP/1.1" 200 486 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_db.png HTTP/1.1" 200 328 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_props.png HTTP/1.1" 200 573 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_search.png HTTP/1.1" 200 538 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_insrow.png HTTP/1.1" 200 157 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_sql.png HTTP/1.1" 200 680 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblexport.png HTTP/1.1" 200 514 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_rights.png HTTP/1.1" 200 461 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblops.png HTTP/1.1" 200 537 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_tblimport.png HTTP/1.1" 200 556 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_triggers.png HTTP/1.1" 200 446 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/console.png HTTP/1.1" 200 292 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_success.png HTTP/1.1" 200 465 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_edit.png HTTP/1.1" 200 377 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/s_top.png HTTP/1.1" 200 220 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_print.png HTTP/1.1" 200 639 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_chart.png HTTP/1.1" 200 449 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_view_add.png HTTP/1.1" 200 678 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_drop.png HTTP/1.1" 200 637 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/window-new.png HTTP/1.1" 200 468 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/navigation&ajax_request=1 HTTP/1.1" 200 2279 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/config/get HTTP/1.1" 200 1513 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | nginx stdout | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/config/get HTTP/1.1" 200 1605 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/index.php?route=/recent-table&ajax_request=1&recent_table=1&no_debug=true&_nocache=1680647539740631332&token=50744b607e38386a6f51453e2439327b HTTP/1.1" 200 1559 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/col_pointer.png HTTP/1.1" 200 102 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/col_drop.png HTTP/1.1" 200 111 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/config/set HTTP/1.1" 200 1504 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/ajax_clock_small.gif HTTP/1.1" 200 1810 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "POST /phpmyadmin/index.php?route=/navigation&ajax_request=1 HTTP/1.1" 200 1954 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_table_add.png HTTP/1.1" 200 571 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:32:19 +0000] "GET /phpmyadmin/themes/pmahomme/img/b_minus.png HTTP/1.1" 200 123 "http://localhost:3000/phpmyadmin/themes/pmahomme/css/theme.css?v=5.2.1" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/index.php?route=/&route=%2F&db=blog&table=sessions HTTP/1.1" 200 18496 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/table/change.js?v=5.2.1 HTTP/1.1" 200 29082 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/gis_data_editor.js?v=5.2.1 HTTP/1.1" 200 13582 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/multi_column_sort.js?v=5.2.1 HTTP/1.1" 200 1281 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/makegrid.js?v=5.2.1 HTTP/1.1" 200 81012 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/sql.js?v=5.2.1 HTTP/1.1" 200 35541 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/js/dist/codemirror/addon/lint/sql-lint.js?v=5.2.1 HTTP/1.1" 200 940 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/favicon.ico HTTP/1.1" 200 22486 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:41:55 [info] 17#17: *26 client 172.18.0.1 closed keepalive connection
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "POST /phpmyadmin/index.php?route=/config/get HTTP/1.1" 200 1513 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "POST /phpmyadmin/index.php?route=/navigation&ajax_request=1 HTTP/1.1" 200 2573 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "POST /phpmyadmin/index.php?route=/config/get HTTP/1.1" 200 1603 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "GET /phpmyadmin/index.php?route=/recent-table&ajax_request=1&recent_table=1&no_debug=true&_nocache=1680648115407489198&token=50744b607e38386a6f51453e2439327b HTTP/1.1" 200 1559 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:22:41:55 +0000] "POST /phpmyadmin/index.php?route=/config/set HTTP/1.1" 200 1504 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 22:42:00 [info] 17#17: *29 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "POST /phpmyadmin/index.php?route=/ HTTP/1.1" 200 78 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "GET /phpmyadmin/index.php?route=/&route=%2F&db=blog&table=sessions HTTP/1.1" 200 3366 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "GET /phpmyadmin/js/dist/cross_framing_protection.js?v=5.2.1 HTTP/1.1" 200 405 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 23:05:51 [info] 17#17: *35 epoll_wait() reported that client prematurely closed connection, so upstream connection is closed too while sending request to upstream, client: 172.18.0.1, server: _, request: "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "localhost:3000"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "GET /phpmyadmin/js/messages.php?l=en&v=5.2.1 HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "GET /phpmyadmin/js/dist/codemirror/addon/lint/sql-lint.js?v=5.2.1 HTTP/1.1" 200 940 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 172.18.0.1 - - [04/Apr/2023:23:05:51 +0000] "GET /phpmyadmin/favicon.ico HTTP/1.1" 200 22486 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"
+blog-web-1    | 2023/04/04 23:05:51 [info] 17#17: *38 client 172.18.0.1 closed keepalive connection
+Attaching to blog-mysql-1, blog-web-1
+blog-mysql-1  | 2023-04-05 20:33:45+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-mysql-1  | 2023-04-05 20:33:45+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+blog-mysql-1  | 2023-04-05 20:33:45+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-web-1    | 2023-04-05 20:33:45,624 INFO Set uid to user 0 succeeded
+blog-web-1    | 2023-04-05 20:33:45,932 INFO RPC interface 'supervisor' initialized
+blog-web-1    | 2023-04-05 20:33:45,932 INFO supervisord started with pid 13
+blog-web-1    | 2023-04-05 20:33:46,934 INFO spawned: 'stdout' with pid 14
+blog-web-1    | 2023-04-05 20:33:46,934 INFO spawned: 'php-fpm8' with pid 15
+blog-web-1    | 2023-04-05 20:33:46,935 INFO spawned: 'nginx' with pid 16
+blog-web-1    | 2023-04-05 20:33:47,935 INFO success: stdout entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-05 20:33:47,936 INFO success: php-fpm8 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-05 20:33:47,936 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+Attaching to blog-mysql-1, blog-web-1
+blog-mysql-1  | 2023-04-07 11:40:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-web-1    | 2023-04-07 11:40:11,678 INFO Set uid to user 0 succeeded
+blog-mysql-1  | 2023-04-07 11:40:11+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+blog-mysql-1  | 2023-04-07 11:40:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1debian11 started.
+blog-web-1    | 2023-04-07 11:40:11,986 INFO RPC interface 'supervisor' initialized
+blog-web-1    | 2023-04-07 11:40:11,986 INFO supervisord started with pid 13
+blog-web-1    | 2023-04-07 11:40:12,988 INFO spawned: 'stdout' with pid 14
+blog-web-1    | 2023-04-07 11:40:12,989 INFO spawned: 'php-fpm8' with pid 15
+blog-web-1    | 2023-04-07 11:40:12,990 INFO spawned: 'nginx' with pid 16
+blog-web-1    | 2023-04-07 11:40:14,046 INFO success: stdout entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-07 11:40:14,046 INFO success: php-fpm8 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+blog-web-1    | 2023-04-07 11:40:14,046 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
